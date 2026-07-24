@@ -1,199 +1,580 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>비주류 문화 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>영등포 노래방 추천 가이드 — 지역 기준별 선택 조건 분석 및 방문 안내</title>
+<meta name="description" content="영등포 지역 노래방 선택 시 핵심 기준과 이용 조건을 분석하는 실용 가이드입니다. 상권별 특성, 음향 시스템 수준, 시간대별 가격 구조 등을 기반으로 상황에 맞는 공간을 찾을 수 있도록 안내합니다.">
+<meta name="keywords" content="영등포 노래방 추천, 영등포 노래방 가이드, 영등포 노래방 조건, 영등포 상권 노래방, 영등포 음향, 영등포 노래방 시간대 가격">
+<link rel="canonical" href="https://yeongdeungpo-karaoke-note.roomlab-dangsan.xyz">
+<meta property="og:title" content="영등포 노래방 추천 가이드 — 조건별 선택 안내">
+<meta property="og:description" content="영등포 노래방을 선택할 때 고려해야 할 핵심 조건과 상권별 특성을 분석하는 실용 가이드.">
+<meta property="og:url" content="https://yeongdeungpo-karaoke-note.roomlab-dangsan.xyz">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="영등포 노래방 추천 가이드 — 조건별 선택 안내">
+<meta name="twitter:description" content="영등포 노래방을 선택할 때 고려해야 할 핵심 조건과 상권별 특성을 분석하는 실용 가이드.">
+<meta name="bpaas-design-system" content="brutalist-avantgarde">
+<meta name="bpaas-design-theme" content="kr-acid-yellow">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "영등포 노래방 추천 가이드 — 조건별 선택 안내",
+  "description": "영등포 지역 노래방 선택 시 핵심 기준과 이용 조건을 분석하는 실용 가이드.",
+  "url": "https://yeongdeungpo-karaoke-note.roomlab-dangsan.xyz",
+  "author": {
+    "@type": "Person",
+    "name": "휘문동 로컬 가이드"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "영등포 노래방에서 가장 중요한 선택 기준은 뭔가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "음향 시스템의 상태가 가장 중요합니다. 조명이나 인테리어보다 실제로 노래할 때 소리가 어떻게 들리는지가 경험을 결정합니다. 또한, 원하는 시간대에 예약이 가능한지, 추가 요금이 발생하는지 사전에 확인해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "주말과 평일의 가격 차이가 큰 편인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네, 상당히 큽니다. 대부분 주말 오후와 저녁 시간대는 기본 이용 요금이 평일 대비 30~50% 높게 설정되어 있습니다. 합리적 이용을 원한다면 평일 저녁이나 주말 이른 오후 시간을 노리는 것이 좋습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "혼자서 이용하기 적합한 영등포 노래방이 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "최근에는 소형 부스를 갖춘 1인 노래방이 늘어나는 추세입니다. 하지만 전통적인 대형 룸을 운영하는 곳에서는 혼자 사용 시 추가 요금이 붙거나 시간제한이 있을 수 있습니다. 방문 전 1인 사용 가능 여부와 요금 체계를 반드시 확인하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "음향 시스템이 좋은 곳을 어떻게 알 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "직접 방문해서 부스 내부를 확인하는 것이 가장 확실합니다. 마이크 잡음이 심하지 않은지, 모니터 음량이 적절히 출력되는지 점검해 보세요. 또한, 리뷰나 커뮤니티에서 음향 관련 언급이 많은 곳을 참고하는 것도 방법입니다."
+      }
     }
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --primary: #111111;
+    --secondary: #ffff00;
+    --accent: #00ff41;
+    --bg: #0a0a0a;
+    --text: #e0e0e0;
+    --border: 3px solid var(--secondary);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Courier New', Courier, 'Lucida Console', Monaco, monospace;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  .r-top-19lt {
+    border: var(--border);
+    background: var(--primary);
+    color: var(--text);
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    display: inline-block;
+    transform: rotate(-1deg);
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+
+  .k-grid-5t7m {
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: inline-block;
+    transform: rotate(0.5deg);
+    margin-right: 8px;
+  }
+
+  .k-txt-a4tf {
+    border-left: 4px solid var(--secondary);
+    padding-left: 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: var(--secondary);
+    font-size: 1.1rem;
+  }
+
+  .r-list-whrf {
+    border: 1px solid var(--text);
+    padding: 12px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--text);
+    background: transparent;
+  }
+
+  .r-foot-fy3d {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--secondary);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+    max-width: 90vw;
+  }
+
+  header {
+    border-bottom: 2px solid var(--secondary);
+    padding: 16px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .v-hero-0hqz {
+    font-weight: 900;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--secondary);
+    letter-spacing: 3px;
+    transform: rotate(-0.5deg);
+    border: 2px solid var(--secondary);
+    padding: 4px 8px;
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  nav a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  main {
+    padding: 80px 48px;
+  }
+
+  .r-txt-av7d {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 80px;
+    max-width: none;
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  section {
+    border-top: 2px solid var(--text);
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--secondary);
+    display: inline-block;
+    padding-bottom: 8px;
+  }
+
+  .r-body-87ob {
+    font-size: 0.9rem;
+    color: var(--text);
+    opacity: 0.8;
+    line-height: 1.7;
+    max-width: 700px;
+  }
+
+  .n-item-c1jy {
+    list-style: none;
+    font-size: 1rem;
+    color: var(--text);
+  }
+
+  .n-item-c1jy li {
+    padding: 16px 0;
+    border-bottom: 1px dashed var(--text);
+    display: flex;
+    gap: 16px;
+  }
+
+  .n-item-c1jy li::before {
+    content: "> ";
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  .q-hero-zgdm {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    text-align: left;
+  }
+
+  .q-hero-zgdm th, .q-hero-zgdm td {
+    border: 1px solid var(--text);
+    padding: 12px 16px;
+    vertical-align: top;
+  }
+
+  .q-hero-zgdm th {
+    background-color: var(--primary);
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 900;
+  }
+
+  .q-hero-zgdm td {
+    color: var(--text);
+  }
+
+  .r-txt-sks7 {
+    background: var(--primary);
+    border: 2px solid var(--accent);
+    padding: 24px;
+    margin-top: 40px;
+    transform: rotate(-0.3deg);
+  }
+
+  .r-txt-sks7 h3 {
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .r-txt-sks7 p {
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  footer {
+    border-top: 2px solid var(--secondary);
+    padding: 48px;
+    background: var(--primary);
+    margin-top: 80px;
+  }
+
+  .q-head-lll3 {
+    max-width: 600px;
+    border: 1px solid var(--text);
+    padding: 24px;
+    margin-bottom: 40px;
+    transform: rotate(0.2deg);
+  }
+
+  .q-head-lll3 h4 {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .q-head-lll3 p {
+    color: var(--text);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .v-body-5vwn {
+    font-size: 0.85rem;
+    color: var(--text);
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    border: 2px solid var(--secondary);
+    padding: 8px 12px;
+    color: var(--secondary);
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 1001;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: var(--primary);
+    border-right: 2px solid var(--secondary);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 48px;
+    transition: left 0.3s ease;
+  }
+
+  .mobile-nav.active {
+    left: 0;
+  }
+
+  .mobile-nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--text);
+    padding-bottom: 8px;
+  }
+
+  .mobile-nav a:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 768px) {
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
+      padding: 16px 20px;
     }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
-    }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
+
+    .hamburger {
       display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
     }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
+
+    nav {
+      display: none;
     }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
+
+    main {
+      padding: 40px 20px;
     }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
+
+    .r-foot-fy3d {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
     }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
+
+    .q-hero-zgdm {
       font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
     }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
+
+    .q-hero-zgdm th, .q-hero-zgdm td {
+      padding: 8px 10px;
     }
-  </style>
+
+    footer {
+      padding: 40px 20px;
+    }
+  }
+</style>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>비주류 문화 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>비주류 문화</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>1960년대 한국 영화 손글씨 포스터 서체(Typography)의 시각 디자인적 보존 가치</h3>
-          <p>디지털 폰트가 전무하던 격변의 1960년대 한국 극장가를 상징하는 극영화 손그림 포스터와 당시 간판 화가들의 붓끝에서 창조된 특유의 볼드한 고딕 타이포그래피 서체들은 당대 시대적 ...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>전통 악기 장인들의 보존 노하우: 해금 실크 현(Silk String)의 천연 비왁스 코팅 기법</h3>
-          <p>한국 전통 찰현악기인 해금의 뽕나무 현에 가해지는 마찰력을 극대화하고 온도 및 습도 편차에 따르는 실크 현의 수축 팽창을 방어하기 위해 벌꿀에서 추출한 밀랍 왁스와 천연 벌꿀을 엄...</p>
-        </a>
-      
+<header>
+  <div class="v-hero-0hqz">[SYSTEM] 영등포_가이드_접속</div>
+  <nav>
+    <a href="#selection-criteria">선정기준</a>
+    <a href="#precautions">주의사항</a>
+    <a href="#suitability">적합성</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="hamburger" onclick="toggleMenu()">[MENU]</div>
+</header>
 
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>활판 인쇄술의 숨겨진 보석: 19세기 납 활자(Lead Type) 캐스팅 자형 조각 기술</h3>
-          <p>활자를 한 자 한 자 구리 틀에 부어 굳히던 19세기 활판 금속 활자 조각술은 잉크가 젖은 종이 속으로 압착되어 들어갈 때 생기는 특유의 깊은 양각 엠보싱 텍스처와 미세하게 무너지...</p>
-        </a>
-      
+<div class="mobile-nav" id="mobileNav">
+  <a href="#selection-criteria" onclick="toggleMenu()">선정기준</a>
+  <a href="#precautions" onclick="toggleMenu()">주의사항</a>
+  <a href="#suitability" onclick="toggleMenu()">적합성</a>
+  <a href="#faq" onclick="toggleMenu()">FAQ</a>
+</div>
 
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>아날로그 문화 컬렉터들이 선정한 화곡 셔츠룸 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
+<main>
+  <section>
+    <div class="r-foot-fy3d">
+      영등포 노래방<br>
+      추천 가이드
+    </div>
+    <div class="k-txt-a4tf">
+      "그냥 들어가면 후회한다. 정보 없이 선택하는 건 도박이다."
+    </div>
+    <div class="r-body-87ob">
+      영등포 상권은 복잡하고 다양합니다. 같은 거리라도 음향 상태, 가격 체계, 이용 분위기가 완전히 다릅니다. 이 가이드는 단순한 목록이 아닙니다. 당신의 현재 상황과 필요에 맞춰 공간을 고를 때 반드시 점검해야 할 항목을 정리한 도구입니다.
+    </div>
+  </section>
 
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>아날로그 문화 컬렉터들이 선정한 화곡 셔츠룸 트렌드 정보 공유 리포트</h3>
-          <p>시간의 깊은 숨결이 고스란히 각인된 명품 악기 해금 현의 장인정신과 잊힌 60년대 활판 서체의 고독한 인쇄 미학을 추적하며 아날로그 감성을 축적해 나가는 컬렉터분들이라면, 소중한 ...</p>
-        </a>
-      
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
+  <section id="selection-criteria">
+    <h2>01. 선정 기준 — 파일 분석</h2>
+    <div class="r-body-87ob" style="margin-bottom: 30px;">
+      노래방을 고를 때首先要看的不是 조명이나 인테리어. 다음 항목을 항목별로 점검해 보세요. 각 항목은 당신의 경험에 직접적인 영향을 줍니다.
+    </div>
+    <ul class="n-item-c1jy">
+      <li>음향 시스템 상태: 마이크 잡음, 모니터 음량, 반주 음질의 선명도</li>
+      <li>룸 구조 및 크기: 인원 수에 맞는 적절한 공간 확보 여부</li>
+      <li>가격 투명성: 기본 시간당 요금, 추가 인원 요금, 시간 초과 시 요금 체계</li>
+      <li>위생 상태: 룸 내부 청결도, 화장실 상태, 소모품 관리</li>
+      <li>예약 시스템: 전화/앱 예약 가능 여부, 대기 시간, 취소 정책</li>
+      <li>상권 특성: 주변 소음, 접근성, 주차 가능 여부</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>02. 조건별 적합성 매트릭스</h2>
+    <div class="r-body-87ob" style="margin-bottom: 30px;">
+      당신의 현재 상황에 맞는 공간을 찾으려면 다음 기준표를 참고하세요. 각 조건에 부합하는 곳을 찾는 것이 가장 효율적입니다.
+    </div>
+    <table class="q-hero-zgdm">
+      <thead>
+        <tr>
+          <th>현재 상황</th>
+          <th>핵심 확인 사항</th>
+          <th>적합 유형</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>3인 이상 단체 이용</td>
+          <td>룸 크기, 추가 인원당 요금, 최대 인원 제한</td>
+          <td>대형 룸 보유 업소</td>
+        </tr>
+        <tr>
+          <td>음향 퀄리티 중시</td>
+          <td>마이크 종류, 모니터 스피커 상태, 방음 시설</td>
+          <td>최근 리모델링한 업소</td>
+        </tr>
+        <tr>
+          <td>합리적 가격 추구</td>
+          <td>평일 할인, 장시간 이용 패키지, 주류 포함 여부</td>
+          <td>주간 할인 적용 업소</td>
+        </tr>
+        <tr>
+          <td> late night 이용</td>
+          <td>영업 시간, 심야 추가 요금, 마지막 주문 시간</td>
+          <td>24시간 또는 심야 영업 업소</td>
+        </tr>
+        <tr>
+          <td>혼자 또는 2인 이용</td>
+          <td>소형 부스 availability, 1인 이용 요금 정책</td>
+          <td>소규모 부스 보유 업소</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="precautions">
+    <h2>03. 이용 전 확인사항 — 필수 체크리스트</h2>
+    <div class="r-body-87ob" style="margin-bottom: 30px;">
+      방문 전 반드시 확인하세요. 현장에서 당황하는 상황을 예방합니다. 다음 항목은 대부분 업소 웹사이트나 전화 문의로 확인 가능합니다.
+    </div>
+    <div class="r-txt-sks7">
+      <h3>1단계: 사전 정보 수집</h3>
+      <p>영업 시간, 기본 요금, 예약 가능 여부를 먼저 확인합니다. 특히 주말이나 공휴일은 예약 필수일 수 있습니다.</p>
+    </div>
+    <div class="r-txt-sks7" style="transform: rotate(0.3deg); margin-top: 16px;">
+      <h3>2단계: 상세 조건 확인</h3>
+      <p>추가 인원 요금, 시간 초과 시 요금, 주류 반입 가능 여부 등 구체적인 비용 구조를 파악합니다.</p>
+    </div>
+    <div class="r-txt-sks7" style="transform: rotate(-0.2deg); margin-top: 16px;">
+      <h3>3단계: 현장 점검</h3>
+      <p>도착 후 룸 상태, 음향 시설, 위생 상태를 직접 확인합니다. 마음에 들지 않으면 다른 곳을 찾는 것이 장기적으로 좋습니다.</p>
+    </div>
+  </section>
+
+  <section id="suitability">
+    <h2>04. 상권별 특성 요약</h2>
+    <div class="r-body-87ob" style="margin-bottom: 30px;">
+      영등포 내 상권마다 노래방의 특성이 다릅니다. 다음은 대표적인 상권별 특징 요약입니다. 참고용이며, 개별 업소마다 차이가 있을 수 있습니다.
+    </div>
+    <div class="r-list-whrf">[지역: 영등포역 인근] — 유동인구 많음, 접근성 좋음, 주말 혼잡도 높음</div>
+    <div class="r-list-whrf">[지역: 문래동] — 비교적 조용한 분위기, 가성비 업소 밀집</div>
+    <div class="r-list-whrf">[지역: 당산동] — 주거지역 근처, 가족 단위 이용 가능 업소 일부 존재</div>
+    <div class="r-list-whrf">[지역: 대림동] — 다양한 문화권 이용객, 메뉴 다양성 높은 편</div>
+  </section>
+
+  <section id="faq">
+    <h2>05. 자주 묻는 질문</h2>
+    <div class="r-body-87ob" style="margin-bottom: 30px;">
+      검색 과정에서 자주 등장하는 질문과 답변입니다. 실제 방문 전에 참고하시면 도움이 됩니다.
+    </div>
+    <div class="r-txt-sks7">
+      <h3>Q: 영등포 노래방에서 가장 중요한 선택 기준은 뭔가요?</h3>
+      <p>음향 시스템의 상태가 가장 중요합니다. 조명이나 인테리어보다 실제로 노래할 때 소리가 어떻게 들리는지가 경험을 결정합니다. 또한, 원하는 시간대에 예약이 가능한지, 추가 요금이 발생하는지 사전에 확인해야 합니다.</p>
+    </div>
+    <div class="r-txt-sks7" style="transform: rotate(-0.1deg); margin-top: 16px;">
+      <h3>Q: 주말과 평일의 가격 차이가 큰 편인가요?</h3>
+      <p>네, 상당히 큽니다. 대부분 주말 오후와 저녁 시간대는 기본 이용 요금이 평일 대비 30~50% 높게 설정되어 있습니다. 합리적 이용을 원한다면 평일 저녁이나 주말 이른 오후 시간을 노리는 것이 좋습니다.</p>
+    </div>
+    <div class="r-txt-sks7" style="transform: rotate(0.2deg); margin-top: 16px;">
+      <h3>Q: 혼자서 이용하기 적합한 영등포 노래방이 있나요?</h3>
+      <p>최근에는 소형 부스를 갖춘 1인 노래방이 늘어나는 추세입니다. 하지만 전통적인 대형 룸을 운영하는 곳에서는 혼자 사용 시 추가 요금이 붙거나 시간제한이 있을 수 있습니다. 방문 전 1인 사용 가능 여부와 요금 체계를 반드시 확인하세요.</p>
+    </div>
+    <div class="r-txt-sks7" style="transform: rotate(-0.3deg); margin-top: 16px;">
+      <h3>Q: 음향 시스템이 좋은 곳을 어떻게 알 수 있나요?</h3>
+      <p>직접 방문해서 부스 내부를 확인하는 것이 가장 확실합니다. 마이크 잡음이 심하지 않은지, 모니터 음량이 적절히 출력되는지 점검해 보세요. 또한, 리뷰나 커뮤니티에서 음향 관련 언급이 많은 곳을 참고하는 것도 방법입니다.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="q-head-lll3">
+    <h4>작성자: 휘문동 로컬 가이드</h4>
+    <p>영등포 지역 상권 정보를 7년간 현장에서 수집해온 로컬 정보 분석가입니다. 광고가 아닌 실 사용 경험과 데이터를 기반으로 가이드를 작성합니다.</p>
   </div>
+  <div class="v-body-5vwn">
+    &copy; 2024 영등포 노래방 추천 가이드. 모든 정보는 참고용이며, 최종 결정은 이용자 본인의 판단에 따릅니다.
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    mobileNav.classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>
